@@ -21,22 +21,6 @@ public class InMemoryDb
 		Console.WriteLine("Added to the list.");
 	}
 
-	public void CopyAndAdd(Person person)
-	{
-		Person CoppiedPerson = (Person)Activator.CreateInstance(person.GetType());
-		
-		var fields = typeof(Person).GetProperties();
-
-		foreach (var field in fields)
-		{
-			var value = field.GetValue(person);
-		}
-
-		Console.WriteLine(CoppiedPerson.ToString());
-
-		this.People.Add(CoppiedPerson);
-	}
-
 	public void List()
 	{
 		foreach (Person person in People) Console.WriteLine(person.ToString());
