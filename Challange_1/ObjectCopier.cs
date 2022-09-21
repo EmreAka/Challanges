@@ -8,7 +8,7 @@ namespace Challange_1;
 
 public class ObjectCopier
 {
-    public void CopyObject<T>(T ObjectToCopy)
+    public T CopyObject<T>(T ObjectToCopy)
     {
         T coppiedObject = (T)Activator.CreateInstance(ObjectToCopy.GetType());
 
@@ -21,5 +21,7 @@ public class ObjectCopier
         }
 
         Console.WriteLine(coppiedObject.ToString());
+
+        return coppiedObject;
     }
 }
