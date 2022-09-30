@@ -2,12 +2,12 @@
   <form class="example-form">
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Note Title</mat-label>
-      <input matInput placeholder="Todo">
+      <input matInput placeholder="Todo" [(ngModel)]="title" [ngModelOptions]="{standalone: true}">
     </mat-form-field>
 
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Leave a comment</mat-label>
-      <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+      <textarea matInput placeholder="Ex. It makes me feel..." [(ngModel)]="note" [ngModelOptions]="{standalone: true}"></textarea>
     </mat-form-field>
 
   </form>

@@ -8,6 +8,8 @@ import {NgxIndexedDBService} from "ngx-indexed-db";
 })
 export class AddNoteComponent implements OnInit {
 
+  title: string = "";
+  note: string = "";
   constructor(private dbService: NgxIndexedDBService) {
   }
 
@@ -16,11 +18,12 @@ export class AddNoteComponent implements OnInit {
 
   addNote() {
     this.dbService.add('notes', {
-      title: `Test`,
-      note: `Test note`
+      title: `${this.title}`,
+      note: `${this.note}`
     }).subscribe({
       next: (value) => {
-        console.log("Success")
+        this.title = "";
+        this.note = "";
       }, error: (err) => {
         console.log(err)
       }

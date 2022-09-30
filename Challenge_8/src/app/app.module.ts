@@ -14,6 +14,7 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatInputModule} from "@angular/material/input";
 import {DBConfig, NgxIndexedDBModule} from 'ngx-indexed-db';
 import { NotesComponent } from './components/notes/notes.component';
+import {FormsModule} from "@angular/forms";
 
 // Ahead of time compiles requires an exported function for factories
 export function migrationFactory() {
@@ -63,7 +64,8 @@ const dbConfig: DBConfig  = {
     MatInputModule,
     MatCardModule,
     MatSelectModule,
-    NgxIndexedDBModule.forRoot(dbConfig)
+    NgxIndexedDBModule.forRoot(dbConfig),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
