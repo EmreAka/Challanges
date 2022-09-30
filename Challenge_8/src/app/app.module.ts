@@ -13,6 +13,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatSelectModule} from "@angular/material/select";
 import {MatInputModule} from "@angular/material/input";
 import {DBConfig, NgxIndexedDBModule} from 'ngx-indexed-db';
+import { NotesComponent } from './components/notes/notes.component';
 
 // Ahead of time compiles requires an exported function for factories
 export function migrationFactory() {
@@ -48,7 +49,8 @@ const dbConfig: DBConfig  = {
   declarations: [
     AppComponent,
     ToolbarComponent,
-    AddNoteComponent
+    AddNoteComponent,
+    NotesComponent
   ],
   imports: [
     BrowserModule,

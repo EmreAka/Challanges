@@ -1,0 +1,7 @@
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; padding: 1rem;">
+  <mat-card *ngFor="let note of notes">
+    <h1>{{note.title}}</h1>
+    <p class=".mat-body">{{note.note}}</p>
+    <button mat-raised-button color="warn" style="width: 70px; align-self: end" (click)="deleteNote(note.id)">Delete</button>
+  </mat-card>
+</div>
