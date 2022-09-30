@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {NgxIndexedDBService} from "ngx-indexed-db";
 
 @Component({
   selector: 'app-add-note',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddNoteComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dbService: NgxIndexedDBService) {
+  }
 
   ngOnInit(): void {
   }
 
+  addNote() {
+    this.dbService.add('notes', {
+      title: `Test`,
+      note: `Test note`
+    }).subscribe({
+      next: (value) => {
+        console.log("Success")
+      }, error: (err) => {
+        console.log(err)
+      }
+    });
+  }
 }

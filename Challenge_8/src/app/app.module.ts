@@ -12,7 +12,37 @@ import { AddNoteComponent } from './components/add-note/add-note.component';
 import {MatCardModule} from "@angular/material/card";
 import {MatSelectModule} from "@angular/material/select";
 import {MatInputModule} from "@angular/material/input";
+import {DBConfig, NgxIndexedDBModule} from 'ngx-indexed-db';
 
+// Ahead of time compiles requires an exported function for factories
+export function migrationFactory() {
+  // The animal table was added with version 2 but none of the existing tables or data needed
+  // to be modified so a migrator for that version is not included.
+  return {
+    1: (db: any, transaction: { objectStore: (arg0: string) => any; }) => {
+      const store = transaction.objectStore('notes');
+      store.createIndex('title', 'title', { unique: false });
+    },
+    2: (db: any, transaction: { objectStore: (arg0: string) => any; }) => {
+      const store = transaction.objectStore('notes');
+      store.createIndex('note', 'note', { unique: false });
+    }
+  };
+}
+
+const dbConfig: DBConfig  = {
+  name: 'NoteAppDb',
+  version: 1,
+  objectStoresMeta: [{
+    store: 'notes',
+    storeConfig: { keyPath: 'id', autoIncrement: true },
+    storeSchema: [
+      { name: 'title', keypath: 'title', options: { unique: false } },
+      { name: 'note', keypath: 'note', options: { unique: false } }
+    ]
+  }],
+  migrationFactory
+};
 
 @NgModule({
   declarations: [
@@ -30,7 +60,8 @@ import {MatInputModule} from "@angular/material/input";
     MatSelectModule,
     MatInputModule,
     MatCardModule,
-    MatSelectModule
+    MatSelectModule,
+    NgxIndexedDBModule.forRoot(dbConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
