@@ -1,0 +1,17 @@
+<div class="container">
+  <form [formGroup]="BMI" class="form">
+    <div class="input">
+      <label>Weight</label>
+      <input formControlName="weight" type="number"/>
+    </div>
+    <div class="input">
+      <label>Height</label>
+      <input formControlName="height" type="number"/>
+    </div>
+    <button (click)="calculateBMI()">Calculate</button>
+  </form>
+  <div class="result">
+    <h1 *ngIf="result">BMI: {{result |number}}</h1>
+    <img style="height: 70%; width: auto" src="../assets/heavy-cat.jpg"/>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  background-color: lightpink;
+
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form button{
+  background-color: darkgrey;
+  border: none;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  cursor: pointer;
+  color: white;
+}
+
+.form button:hover{
+  background-color: gray;
+}
+
+.input{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.input input{
+  padding: 3px;
+  max-width: 200px;
+  background-color: pink;
+  outline: none;
+  border: none;
+}
+
+.result{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.result h1{
+  justify-self: start;
+  padding: 0;
+  margin: 0;
+}
