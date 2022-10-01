@@ -11,7 +11,8 @@
     <button (click)="calculateBMI()">Calculate</button>
   </form>
   <div class="result">
-    <h1 *ngIf="result">BMI: {{result |number}}</h1>
-    <img style="height: 70%; width: auto" src="../assets/heavy-cat.jpg"/>
+    <h2 *ngIf="result">BMI: {{result |number}}</h2>
+    <h3 *ngIf="result">{{displayResultString()}}</h3>
+    <img style="height: 70%; width: auto" [src]="displayResult()"/>
   </div>
 </div>

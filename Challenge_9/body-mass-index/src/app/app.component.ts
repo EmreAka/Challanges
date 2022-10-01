@@ -33,14 +33,25 @@ export class AppComponent implements OnInit{
     this.result = result;
   }
 
+  displayResultString(): string{
+    if (!this.result)
+      return ""
+    else if(this.result < 18.5)
+      return "Underweight"
+    else if (this.result > 18.5 && this.result < 24.9)
+      return "Healthy"
+    else
+      return "Overweight"
+  }
+
   displayResult(): string{
     if (!this.result)
       return ""
     else if(this.result < 18.5)
-      return "You are underweight"
+      return "../assets/skinny-cat.jpg"
     else if (this.result > 18.5 && this.result < 24.9)
-      return "You are healthy"
+      return "../assets/healthy-cat.jpg"
     else
-      return "You are overweight"
+      return "../assets/heavy-cat.jpg"
   }
 }
