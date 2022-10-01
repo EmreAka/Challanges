@@ -1,18 +1,18 @@
 <div class="container">
   <form [formGroup]="BMI" class="form">
     <div class="input">
-      <label>Weight</label>
+      <label>Weight (kg)</label>
       <input formControlName="weight" type="number"/>
     </div>
     <div class="input">
-      <label>Height</label>
+      <label>Height (cm)</label>
       <input formControlName="height" type="number"/>
     </div>
     <button (click)="calculateBMI()">Calculate</button>
   </form>
   <div class="result">
-    <h2 *ngIf="result">BMI: {{result |number}}</h2>
-    <h3 *ngIf="result">{{displayResultString()}}</h3>
+    <h2 *ngIf="result">{{displayResultString()}}</h2>
+    <h3 *ngIf="result">BMI: {{result |number}}</h3>
     <img style="height: 70%; width: auto" [src]="displayResult()"/>
   </div>
 </div>

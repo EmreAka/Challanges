@@ -16,7 +16,9 @@
 }
 
 .form button{
-  background-color: darkgrey;
+  font-size: 1rem;
+  /*background-color: darkgrey;*/
+  background-color: #FF577F;
   border: none;
   padding: 0.5rem 1rem 0.5rem 1rem;
   cursor: pointer;
@@ -24,7 +26,7 @@
 }
 
 .form button:hover{
-  background-color: gray;
+  background-color: #e84d71;
 }
 
 .input{
@@ -33,11 +35,17 @@
   gap: 5px;
 }
 .input input{
+  font-size: 1rem;
+  font-weight: 300;
   padding: 3px;
-  max-width: 200px;
   background-color: pink;
   outline: none;
   border: none;
+}
+
+.input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .result{

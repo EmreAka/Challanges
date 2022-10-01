@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {Meta, Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-root',
@@ -7,13 +8,15 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  title = 'body-mass-index';
   BMI: FormGroup;
   result: number;
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private meta: Meta, private title: Title) {
   }
 
   ngOnInit(): void {
+    this.title.setTitle("Body Mass Index Calculation")
+    this.meta.addTags([{name:'description', content: 'Calculate your body mass index.'},
+      {name:'keywords', content: 'body, mass, index, calculate'}]);
     this.createForm();
     this.BMI.valueChanges.subscribe({
       next: value => {console.log(value);}
