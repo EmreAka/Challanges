@@ -1,3 +1,16 @@
+<h1 class="title">Weather Cast</h1>
+
 <div class="container">
 
+  <div class="user-input">
+    <div class="input">
+      <label>City:</label>
+      <input placeholder="Newyork" type="text" [(ngModel)]="city"/>
+    </div>
+    <button (click)="getWeaterCast()">Get Weather Cast</button>
+  </div>
+
+  <div class="result">
+    <h2 *ngIf="weather">{{weather.current.condition.text}}</h2>
+  </div>
 </div>
