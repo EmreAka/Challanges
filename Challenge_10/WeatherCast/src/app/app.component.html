@@ -12,5 +12,6 @@
 
   <div class="result">
     <h2 *ngIf="weather">{{weather.current.condition.text}}</h2>
+    <img height="100" *ngIf="weather" [src]="weather.current.condition.icon"/>
   </div>
 </div>
