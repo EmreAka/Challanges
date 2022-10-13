@@ -4,6 +4,8 @@
 
 //var result = MigratoryBirds.Run();
 
-var result = DiagonalDifference.Run();
+//var result = DiagonalDifference.Run();
+
+var result = PickingNumbers.Run();
 
 Console.WriteLine(result);
