@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Challenge_5", "Challenge_5\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Challenge_6", "Challenge_6\Challenge_6.csproj", "{41E464E6-D6C7-4D7F-A277-8A8748EAFE3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiApp1", "MauiApp1\MauiApp1.csproj", "{3CEE7B35-07AE-4073-937D-F87E16279D5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiApp1", "MauiApp1\MauiApp1.csproj", "{3CEE7B35-07AE-4073-937D-F87E16279D5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerRankQuestions", "HackerRankQuestions\HackerRankQuestions.csproj", "{A4CC9838-B541-4B67-85EC-0A32D2B01A7E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,10 @@ Global
 		{3CEE7B35-07AE-4073-937D-F87E16279D5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CEE7B35-07AE-4073-937D-F87E16279D5B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3CEE7B35-07AE-4073-937D-F87E16279D5B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{A4CC9838-B541-4B67-85EC-0A32D2B01A7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4CC9838-B541-4B67-85EC-0A32D2B01A7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4CC9838-B541-4B67-85EC-0A32D2B01A7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4CC9838-B541-4B67-85EC-0A32D2B01A7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
