@@ -6,6 +6,9 @@
 
 //var result = DiagonalDifference.Run();
 
-var result = PickingNumbers.Run();
+//var result = PickingNumbers.Run();
 
-Console.WriteLine(result);
+var result = ClimbingLeaderboard.Run();
+
+foreach (var item in result)
+    Console.WriteLine(item);
