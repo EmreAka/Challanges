@@ -13,15 +13,6 @@ internal class ClimbingLeaderboard
     private static List<int> ranked = new() { 100, 50 };
     private static List<int> player = new() { 5, 25, 50, 100, 120 };
 
-    public static List<int> TEST()
-    {
-        List<int> result = new();
-        var re = BinarySearch(ranked.Distinct().ToList(), 85);
-        if (re != -1)
-            Console.WriteLine($"{re + 1} RANK");
-        return result;
-    }
-
     private static int BinarySearch(List<int> array, int item)
     {
         int left = 0;
