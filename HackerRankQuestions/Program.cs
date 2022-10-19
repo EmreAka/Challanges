@@ -8,7 +8,10 @@
 
 //var result = PickingNumbers.Run();
 
-var result = ClimbingLeaderboard.Run();
+//var result = ClimbingLeaderboard.Run();
 
-foreach (var item in result)
-    Console.WriteLine(item);
+//var result = TheGridSearch.Run();
+
+var result = MarsExploration.Run();
+
+Console.WriteLine(result);
